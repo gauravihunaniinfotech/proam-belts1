@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crownworks | Custom Championship Belts</title>
+<meta name="description" content="Design custom championship belts for boxing, fantasy leagues, sales teams and events. Free design proof, worldwide shipping.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 002 1.6h8.1a2 2 0 002-1.5L21.5 8H6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5.5 5.5 0 00-7.8 0L12 6.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 22l7.8-7.5 1-1.1a5.5 5.5 0 000-7.8z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3 6.5 7 .9-5.1 4.9 1.3 7-6.2-3.5-6.2 3.5 1.3-7L2 9.4l7-.9z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 9h4l4 3v4h-8"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6 3-6M12 21L9 9M12 21l3-12"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 100 18c1.5 0 2-1 1.5-2.2-.5-1.2.3-2.300 1.600-2.300H17a4 4 0 004-4c0-5-4-9.500-9-9.500z"/><circle cx="7.500" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.500" r="1"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800z"/><path d="M19 17l.7 1.800 1.800.7-1.800.7L19 22l-.7-1.800-1.800-.7 1.800-.7z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7 4l13 8-13 8z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7 7H4v6h3l-2 4h3l2-4V7zm9 0h-3v6h3l-2 4h3l2-4V7z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 9h4v11H4zM6 3.5a2 2 0 110 4 2 2 0 010-4zM10 9h4v1.6c.6-1 1.8-1.9 3.5-1.9 3 0 3.5 2 3.5 4.5V20h-4v-6c0-1.300 0-2.700-1.700-2.700S14 12.700 14 14v6h-4z"/></symbol>
+</svg>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="topbar">
+  <p><svg class="ic"><use href="#i-sparkle"/></svg> Free design proof within 24 hours <span class="dot"></span> Free shipping over $300 <span class="dot hide-s"></span> <span class="hide-s">7-day average turnaround</span></p>
+</div>
+
+<!-- ============ FLOATING NAV ============ -->
+<div class="nav-wrap">
+  <header class="nav" id="nav">
+    <a href="#home" class="brand" aria-label="Crownworks home">
+      <img src="../crownworks/assets/images/Mask_group_7_333067f5-b985-4275-808a-b04df8acffa7.webp"/>
+      <!-- <span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M5 24l-1.500-13 6.500 5 6-9 6 9 6.500-5L27 24z" fill="currentColor"/><rect x="5" y="25.500" width="22" height="3" rx="1.500" fill="currentColor"/></svg></span> -->
+      <!-- <span class="brand-name">Crownworks</span> -->
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#categories" class="on">Collections</a>
+      <a href="#craft">Craft</a>
+      <a href="#shop">Shop</a>
+      <a href="#process">Process</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="cart-btn" id="cartOpen" aria-label="Open cart"><svg class="ic"><use href="#i-cart"/></svg><span class="cart-count" data-count-badge>0</span></button>
+      <a href="#cta" class="btn btn-sm nav-cta">Design a belt <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#categories">Collections</a><a href="#craft">Craft</a><a href="#shop">Shop</a><a href="#process">Process</a><a href="#stories">Stories</a><a href="#faq">FAQ</a>
+    <a href="#cta" class="btn">Design a belt <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ 01 HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="dots"></i></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="rating-pill rv"><span class="avatars"><i>M</i><i>P</i><i>D</i></span><span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span> <b>4.9</b> from 2,400+ teams</span>
+      <h1 class="rv" style="--d:.08s">Custom championship belts, <span class="hl">built to be held high.</span></h1>
+      <p class="lead rv" style="--d:.16s">Boxing gyms, fantasy leagues, sales floors and event stages choose Crownworks for hand-finished belts with your name, logo and colors. Free design proof, worldwide shipping.</p>
+      <div class="hero-actions rv" style="--d:.24s">
+        <a href="#cta" class="btn">Design your belt <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <a href="#shop" class="btn btn-ghost">Browse the shop <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <ul class="hero-points rv" style="--d:.32s">
+        <li><svg class="ic"><use href="#i-check"/></svg> No design fees</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Unlimited revisions</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> 30-day guarantee</li>
+      </ul>
+    </div>
+
+    <div class="stage-wrap rv" style="--d:.2s">
+      <div class="stage" id="heroStage">
+        <div class="stage-img">
+          <img class="on" src="assets/images/belt-crimson-ring.webp" alt="Crimson championship belt with gold plates in a boxing ring">
+          <img src="assets/images/belt-rose-ring.webp" alt="Rose pink championship belt with silver plates in a boxing ring">
+          <img src="assets/images/belt-arctic-ring.webp" alt="White championship belt with a gold globe plate in a boxing ring">
+        </div>
+        <span class="chip chip-a"><svg class="ic"><use href="#i-sparkle"/></svg> Free proof in 24h</span>
+        <span class="chip chip-b"><svg class="ic"><use href="#i-truck"/></svg> Ships in 7 days</span>
+        <div class="picker">
+          <div class="picker-info"><small>Now showing</small><b id="heroName">Crimson Champion</b><span id="heroPrice">From $219</span></div>
+          <div class="picker-sw">
+            <button class="sw on" data-name="Crimson Champion" data-price="From $219" aria-label="Crimson Champion"><img src="assets/images/belt-crimson-ring.webp" alt=""></button>
+            <button class="sw" data-name="Rose Silver Title" data-price="From $199" aria-label="Rose Silver Title"><img src="assets/images/belt-rose-ring.webp" alt=""></button>
+            <button class="sw" data-name="Arctic Globe Title" data-price="From $239" aria-label="Arctic Globe Title"><img src="assets/images/belt-arctic-ring.webp" alt=""></button>
+          </div>
+        </div>
+        <span class="sticker" aria-hidden="true"><b>2026</b><small>New<br>Collection</small></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats rv">
+      <div><b data-count="12400" data-suffix="+">0</b><span>Belts crafted</span></div>
+      <div><b data-count="48">0</b><span>Countries shipped</span></div>
+      <div><b data-count="4.9" data-dec="1">0</b><span>Average rating</span></div>
+      <div><b data-count="7" data-suffix=" days">0</b><span>Average turnaround</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee-wrap" aria-hidden="true"><div class="marquee">
+  <div class="marquee-track">
+    <span>Custom text &amp; logos</span><i>✦</i><span>Gold, silver &amp; black chrome plating</span><i>✦</i><span>Hand-stitched leather</span><i>✦</i><span>Free design proof</span><i>✦</i><span>Worldwide shipping</span><i>✦</i><span>Boxing · MMA · Fantasy · Corporate</span><i>✦</i>
+    <span>Custom text &amp; logos</span><i>✦</i><span>Gold, silver &amp; black chrome plating</span><i>✦</i><span>Hand-stitched leather</span><i>✦</i><span>Free design proof</span><i>✦</i><span>Worldwide shipping</span><i>✦</i><span>Boxing · MMA · Fantasy · Corporate</span><i>✦</i>
+  </div>
+</div></div>
+
+<!-- ============ 02 CATEGORIES (BENTO) ============ -->
+<section class="sec" id="categories">
+  <div class="container">
+    <header class="sec-head split rv">
+      <div>
+        <span class="eyebrow"><svg class="ic"><use href="#i-sparkle"/></svg> Collections</span>
+        <h2 class="sec-title">A belt for <span class="hl">every achievement</span></h2>
+      </div>
+      <p class="sec-sub">Whether it is a world title, a league trophy or a record sales quarter, start from a proven style and make it yours.</p>
+    </header>
+
+    <div class="bento" data-stagger>
+      <a href="#shop" class="tile t-a rv">
+        <img src="assets/images/belt-service-usn.webp" alt="Red leather service belt with gold anchor plate" loading="lazy">
+        <span class="tile-tag">Service &amp; Retirement</span>
+        <div class="tile-body"><h3>Honor a career</h3><p>Engraved plates for military, fire and police retirements.</p></div>
+        <span class="tile-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a href="#shop" class="tile t-b rv">
+        <img src="assets/images/tile-title-lions.webp" alt="Black title belt with gold lion crest" loading="lazy">
+        <span class="tile-tag">Title Belts</span>
+        <div class="tile-body"><h3>Championship titles</h3></div>
+        <span class="tile-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a href="#shop" class="tile t-c rv">
+        <img src="assets/images/tile-fantasy-football.webp" alt="Gold fantasy football championship belt" loading="lazy">
+        <span class="tile-tag">Fantasy League</span>
+        <div class="tile-body"><h3>League winners</h3></div>
+        <span class="tile-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a href="#shop" class="tile t-d rv">
+        <img src="assets/images/tile-combat-cage.webp" alt="Stack of black cage-style championship belts" loading="lazy">
+        <span class="tile-tag">Combat Sports</span>
+        <div class="tile-body"><h3>MMA &amp; promotions</h3></div>
+        <span class="tile-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a href="#shop" class="tile t-e rv">
+        <img src="assets/images/tile-corporate-gold.webp" alt="Red and gold company championship belt" loading="lazy">
+        <span class="tile-tag">Corporate</span>
+        <div class="tile-body"><h3>Sales &amp; recognition</h3></div>
+        <span class="tile-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a href="#shop" class="tile t-f rv">
+        <img src="assets/images/tile-custom-globe.webp" alt="White belt with gold globe plate" loading="lazy">
+        <span class="tile-tag">Custom</span>
+        <div class="tile-body"><h3>Fully custom</h3><p>Your artwork, your plates, your strap.</p></div>
+        <span class="tile-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <div class="tile-cta t-g rv">
+        <b>Can't find your style?</b>
+        <p>Send us an idea. Our designers will sketch it for free.</p>
+        <a href="#cta" class="btn btn-sm btn-dark">Start a custom belt <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 CRAFT (ACCORDION + MEDIA) ============ -->
+<section class="sec sec-tint" id="craft">
+  <div class="container craft-grid">
+    <div class="craft-media rv">
+      <img class="on" src="assets/images/174fd5f3b4cd591a0dc150471365636ca04f723e_1.webp" alt="Premium black leather belt with gold plates" loading="lazy">
+      <img src="assets/images/3af27155283193767696bbfaf10f96c1778686ef_1.webp" alt="Custom belt with engraved globe plate" loading="lazy">
+      <img src="assets/images/6d51cc2ba1f2b31fdaaaaeba17318b863b686ce5_1.webp" alt="Belt packed and ready to ship" loading="lazy">
+      <img src="assets/images/a0eaf935e67e7691528f46cbab6a64b056c355a0.webp" alt="Hand-finished leather and gold plate detail" loading="lazy">
+      <img src="assets/images/Group_734_1.webp" alt="Award set with belt and plaques" loading="lazy">
+      <span class="media-badge"><svg class="ic"><use href="#i-shield"/></svg> 30-day satisfaction guarantee</span>
+    </div>
+
+    <div class="craft-copy">
+      <span class="eyebrow rv"><svg class="ic"><use href="#i-gem"/></svg> Built by craftsmen</span>
+      <h2 class="sec-title rv" style="--d:.06s">Chosen by <span class="hl">champions.</span></h2>
+      <p class="sec-sub rv" style="--d:.1s">Every belt passes through the same bench: cast, polished, plated, stitched and inspected by people who care how it looks on the podium.</p>
+
+      <div class="acc rv" style="--d:.14s">
+        <div class="ac-item open">
+          <button class="ac-head" aria-expanded="true"><span class="ac-ic"><svg class="ic"><use href="#i-gem"/></svg></span><span>Premium materials</span><svg class="ic ac-plus"><use href="#i-plus"/></svg></button>
+          <div class="ac-body"><div><p>Full-grain leather straps and solid zinc-alloy plates, finished in 24K gold, silver or black chrome that will not flake or fade.</p></div></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head" aria-expanded="false"><span class="ac-ic"><svg class="ic"><use href="#i-palette"/></svg></span><span>Custom designs</span><svg class="ic ac-plus"><use href="#i-plus"/></svg></button>
+          <div class="ac-body"><div><p>Upload a logo or describe an idea. You get a free proof within 24 hours and unlimited revisions before anything is made.</p></div></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head" aria-expanded="false"><span class="ac-ic"><svg class="ic"><use href="#i-globe"/></svg></span><span>Worldwide shipping</span><svg class="ic ac-plus"><use href="#i-plus"/></svg></button>
+          <div class="ac-body"><div><p>Tracked, insured delivery to 48 countries, packed in a padded display box so it arrives ready to present.</p></div></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head" aria-expanded="false"><span class="ac-ic"><svg class="ic"><use href="#i-sparkle"/></svg></span><span>Expert craftsmanship</span><svg class="ic ac-plus"><use href="#i-plus"/></svg></button>
+          <div class="ac-body"><div><p>Artisans hand-polish every plate and stitch every strap. Each belt is inspected for finish, text accuracy and stitching.</p></div></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head" aria-expanded="false"><span class="ac-ic"><svg class="ic"><use href="#i-shield"/></svg></span><span>Satisfaction guarantee</span><svg class="ic ac-plus"><use href="#i-plus"/></svg></button>
+          <div class="ac-body"><div><p>Not happy? We will remake or refund your belt within 30 days. No awkward questions.</p></div></div>
+        </div>
+      </div>
+      <a href="#process" class="btn rv" style="--d:.18s">See how it's made <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 SHOP (CAROUSEL) ============ -->
+<section class="sec" id="shop">
+  <div class="container">
+    <header class="sec-head split rv">
+      <div>
+        <span class="eyebrow"><svg class="ic"><use href="#i-star"/></svg> Best sellers</span>
+        <h2 class="sec-title">Premium championship <span class="hl">belts</span></h2>
+      </div>
+      <div class="shop-tools">
+        <div class="chips" role="tablist" aria-label="Filter products">
+          <button class="chip on" data-f="all">All</button>
+          <button class="chip" data-f="boxing">Boxing</button>
+          <button class="chip" data-f="fantasy">Fantasy</button>
+          <button class="chip" data-f="corporate">Corporate</button>
+        </div>
+        <div class="arrows"><button class="arrow" id="shopPrev" aria-label="Previous"><svg class="ic"><use href="#i-left"/></svg></button><button class="arrow" id="shopNext" aria-label="Next"><svg class="ic"><use href="#i-right"/></svg></button></div>
+      </div>
+    </header>
+
+    <div class="p-track" id="shopTrack">
+      <article class="p-card" data-tags="boxing" data-id="crimson" data-name="Crimson Champion" data-price="219" data-img="assets/images/belt-crimson-ring.webp">
+        <div class="p-img"><img src="assets/images/image_144_14_e7001135-97a8-4054-aa7c-d09b23e2b86e.webp" alt="Crimson Champion belt" loading="lazy"><span class="badge">Best seller</span><button class="heart" aria-label="Save to wishlist"><svg class="ic"><use href="#i-heart"/></svg></button></div>
+        <div class="p-body"><div class="p-rate"><svg class="ic"><use href="#i-star"/></svg> 4.9 <small>(312)</small></div><h3>Crimson Champion</h3><p>Red leather, gold plates</p>
+          <div class="p-foot"><b>$219</b><button class="add-btn"><svg class="ic"><use href="#i-plus"/></svg> Add</button></div></div>
+      </article>
+      <article class="p-card" data-tags="boxing" data-id="rose" data-name="Rose Silver Title" data-price="199" data-img="assets/images/belt-rose-ring.webp">
+        <div class="p-img"><img src="assets/images/image_144_11_3b1e2fbc-41ac-4484-ae53-04ee1ea64257.webp" alt="Rose Silver Title belt" loading="lazy"><span class="badge new">New</span><button class="heart" aria-label="Save to wishlist"><svg class="ic"><use href="#i-heart"/></svg></button></div>
+        <div class="p-body"><div class="p-rate"><svg class="ic"><use href="#i-star"/></svg> 4.8 <small>(96)</small></div><h3>Rose Silver Title</h3><p>Pink leather, silver filigree</p>
+          <div class="p-foot"><b>$199</b><button class="add-btn"><svg class="ic"><use href="#i-plus"/></svg> Add</button></div></div>
+      </article>
+      <article class="p-card" data-tags="boxing corporate" data-id="arctic" data-name="Arctic Globe Title" data-price="239" data-img="assets/images/belt-arctic-ring.webp">
+        <div class="p-img"><img src="assets/images/image_144_10_720a048a-530c-4c1b-b891-e24bf4de884f.webp" alt="Arctic Globe Title belt" loading="lazy"><span class="badge">Top rated</span><button class="heart" aria-label="Save to wishlist"><svg class="ic"><use href="#i-heart"/></svg></button></div>
+        <div class="p-body"><div class="p-rate"><svg class="ic"><use href="#i-star"/></svg> 5.0 <small>(188)</small></div><h3>Arctic Globe Title</h3><p>White leather, gold globe</p>
+          <div class="p-foot"><b>$239</b><button class="add-btn"><svg class="ic"><use href="#i-plus"/></svg> Add</button></div></div>
+      </article>
+      <article class="p-card" data-tags="fantasy" data-id="gridiron" data-name="Gridiron Gold" data-price="249" data-img="assets/images/tile-fantasy-football.webp">
+        <div class="p-img"><img src="assets/images/image_144_15_443c7a30-5efb-4740-8441-d223efd4bd29.webp" alt="Gridiron Gold fantasy belt" loading="lazy"><span class="badge">League fave</span><button class="heart" aria-label="Save to wishlist"><svg class="ic"><use href="#i-heart"/></svg></button></div>
+        <div class="p-body"><div class="p-rate"><svg class="ic"><use href="#i-star"/></svg> 4.9 <small>(264)</small></div><h3>Gridiron Gold</h3><p>Black strap, engraved player</p>
+          <div class="p-foot"><b>$249</b><button class="add-btn"><svg class="ic"><use href="#i-plus"/></svg> Add</button></div></div>
+      </article>
+      <article class="p-card" data-tags="boxing" data-id="obsidian" data-name="Obsidian Crest" data-price="229" data-img="assets/images/tile-title-lions.webp">
+        <div class="p-img"><img src="assets/images/image_144_16_a60c23f5-8cc7-45be-954c-a9afdcb31b40.webp" alt="Obsidian Crest belt" loading="lazy"><button class="heart" aria-label="Save to wishlist"><svg class="ic"><use href="#i-heart"/></svg></button></div>
+        <div class="p-body"><div class="p-rate"><svg class="ic"><use href="#i-star"/></svg> 4.7 <small>(71)</small></div><h3>Obsidian Crest</h3><p>Black leather, lion crest</p>
+          <div class="p-foot"><b>$229</b><button class="add-btn"><svg class="ic"><use href="#i-plus"/></svg> Add</button></div></div>
+      </article>
+      <article class="p-card" data-tags="corporate" data-id="podium" data-name="Podium Award Set" data-price="329" data-img="assets/images/tile-awards-set.webp">
+        <div class="p-img"><img src="assets/images/image_144_12_bcc5a3a8-d5ac-4719-aeae-b145b240ee55.webp" alt="Podium award set with belt and plaques" loading="lazy"><span class="badge new">Bundle</span><button class="heart" aria-label="Save to wishlist"><svg class="ic"><use href="#i-heart"/></svg></button></div>
+        <div class="p-body"><div class="p-rate"><svg class="ic"><use href="#i-star"/></svg> 4.9 <small>(54)</small></div><h3>Podium Award Set</h3><p>Belt, plaques &amp; medals</p>
+          <div class="p-foot"><b>$329</b><button class="add-btn"><svg class="ic"><use href="#i-plus"/></svg> Add</button></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =================== HALL OF CHAMPIONS SECTION =================== -->
+<section class="hall-champions" id="hall-of-champions">
+
+  <div class="hall-container">
+
+    <!-- Section Heading -->
+    <div class="hall-heading">
+      <div class="hall-eyebrow">
+        <span></span>
+        THE LEGACY OF GREATNESS
+      </div>
+
+      <div class="hall-heading-row">
+        <div>
+          <h2>
+            Hall of <span>Champions.</span>
+          </h2>
+          <p>
+            Every champion has a story. Every victory leaves a legacy.
+            Celebrating the fighters, the victories and the belts
+            that define greatness.
+          </p>
+        </div>
+
+        <a href="#" class="hall-view-btn">
+          Explore Our Legacy
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Champions Grid -->
+    <div class="hall-grid">
+
+      <!-- Featured Champion -->
+      <article class="hall-card hall-featured">
+
+        <img
+          src="../crownworks/assets/images/military_championship_custom_award_belt_proambelts.webp"
+          alt="Boxing champion holding championship belt"
+          class="hall-image"
+        >
+
+        <div class="hall-overlay"></div>
+
+        <div class="hall-top">
+          <span class="hall-tag">FEATURED CHAMPION</span>
+          <span class="hall-year">01 / 03</span>
+        </div>
+
+        <div class="hall-content">
+          <span class="hall-category">WORLD CHAMPIONSHIP</span>
+          <h3>Champions Are<br>Made, Not Given.</h3>
+          <p>
+            A journey of dedication, determination and
+            unforgettable championship moments.
+          </p>
+
+          <a href="#" class="hall-discover">
+            Discover The Story <span>↗</span>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- Second Champion -->
+      <article class="hall-card hall-small">
+
+        <img
+          src="../crownworks/assets/images/EBi_custom_championship_title_Belt_proambelts_-_Copy.webp"
+          alt="Boxing champion celebrating victory"
+          class="hall-image"
+        >
+
+        <div class="hall-overlay"></div>
+
+        <div class="hall-top">
+          <span class="hall-tag">CHAMPION SPOTLIGHT</span>
+          <span class="hall-number">02</span>
+        </div>
+
+        <div class="hall-content">
+          <span class="hall-category">THE WINNING MOMENT</span>
+          <h3>Victory Has<br>A Name.</h3>
+          <a href="#" class="hall-discover">
+            View Story <span>↗</span>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- Third Champion -->
+      <article class="hall-card hall-small">
+
+        <img
+          src="../crownworks/assets/images/chilli_cook_off_belt.jpg"
+          alt="Boxing championship belt presentation"
+          class="hall-image"
+        >
+
+        <div class="hall-overlay"></div>
+
+        <div class="hall-top">
+          <span class="hall-tag">LEGACY COLLECTION</span>
+          <span class="hall-number">03</span>
+        </div>
+
+        <div class="hall-content">
+          <span class="hall-category">BUILT FOR GREATNESS</span>
+          <h3>Wear The<br>Legacy.</h3>
+          <a href="#" class="hall-discover">
+            Explore More <span>↗</span>
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- Bottom Stats -->
+    <div class="hall-bottom">
+
+      <div class="hall-bottom-text">
+        <span class="hall-bottom-line"></span>
+        <p>MORE THAN A BELT. IT'S A LEGACY.</p>
+      </div>
+
+      <div class="hall-stats">
+        <div class="hall-stat">
+          <h4>01</h4>
+          <span>Dedication</span>
+        </div>
+
+        <div class="hall-stat">
+          <h4>02</h4>
+          <span>Determination</span>
+        </div>
+
+        <div class="hall-stat">
+          <h4>03</h4>
+          <span>Championship</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ============ 05 SPOTLIGHT (DARK CONTRAST) ============ -->
+<section class="spot" id="spotlight">
+  <div class="container spot-grid">
+    <div class="spot-media rv">
+      <div class="spot-frame">
+        <img id="spotImg" src="assets/images/belt-arctic-ring.webp" alt="Arctic Globe Title belt">
+        <button class="hot" style="--x:50%;--y:58%" aria-label="Centerpiece plate"><i></i><span class="tip"><b>Centerpiece plate</b>Up to 3 lines of custom text</span></button>
+        <button class="hot" style="--x:19%;--y:58%" aria-label="Side plates"><i></i><span class="tip"><b>Side plates</b>Add names, years or logos</span></button>
+        <button class="hot" style="--x:30%;--y:40%" aria-label="Leather strap"><i></i><span class="tip"><b>Hand-stitched strap</b>Full-grain leather, 4 colors</span></button>
+      </div>
+      <p class="hint">Tap the dots to explore the details</p>
+    </div>
+
+    <div class="spot-copy">
+      <span class="eyebrow eyebrow-dark rv"><svg class="ic"><use href="#i-sparkle"/></svg> Product spotlight</span>
+      <h2 class="sec-title rv" style="--d:.06s" id="spotTitle">Arctic Globe Title Belt</h2>
+      <div class="spot-rate rv" style="--d:.1s"><span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span> 5.0 · 188 reviews</div>
+      <p class="spot-text rv" style="--d:.14s">Our most-loved title belt. A bold gold globe centerpiece, four custom side plates and a clean white strap that photographs beautifully on the podium.</p>
+
+      <div class="opt rv" style="--d:.18s">
+        <span class="opt-label">Strap color: <b id="spotColor">Arctic White</b></span>
+        <div class="swatches">
+          <button class="swatch on" data-id="spot-white" data-name="Arctic Globe Title Belt" data-color="Arctic White" data-price="239" data-img="assets/images/belt-arctic-ring.webp" style="--c:#fff" aria-label="Arctic White"></button>
+          <button class="swatch" data-id="spot-red" data-name="Crimson Champion Belt" data-color="Crimson Red" data-price="219" data-img="assets/images/belt-crimson-ring.webp" style="--c:#d6232f" aria-label="Crimson Red"></button>
+          <button class="swatch" data-id="spot-rose" data-name="Rose Silver Title Belt" data-color="Rose Pink" data-price="199" data-img="assets/images/belt-rose-ring.webp" style="--c:#f08c93" aria-label="Rose Pink"></button>
+        </div>
+      </div>
+
+      <div class="buy rv" style="--d:.22s">
+        <div class="price"><b id="spotPrice">$239</b><s>$289</s></div>
+        <div class="qty"><button id="qMinus" aria-label="Decrease"><svg class="ic"><use href="#i-minus"/></svg></button><span id="qVal">1</span><button id="qPlus" aria-label="Increase"><svg class="ic"><use href="#i-plus"/></svg></button></div>
+        <button class="btn" id="spotAdd">Add to cart <span class="bi"><svg class="ic"><use href="#i-cart"/></svg></span></button>
+      </div>
+
+      <ul class="perks rv" style="--d:.26s">
+        <li><svg class="ic"><use href="#i-truck"/></svg><div><b>Free shipping</b><span>On orders over $300</span></div></li>
+        <li><svg class="ic"><use href="#i-clock"/></svg><div><b>Ready in 7 days</b><span>After proof approval</span></div></li>
+        <li><svg class="ic"><use href="#i-shield"/></svg><div><b>30-day guarantee</b><span>Remake or refund</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 PROCESS (STEPPER) ============ -->
+<section class="sec" id="process">
+  <div class="container">
+    <header class="sec-head center rv">
+      <span class="eyebrow"><svg class="ic"><use href="#i-sparkle"/></svg> How it works</span>
+      <h2 class="sec-title">Your vision. <span class="hl">Our craftsmanship.</span></h2>
+      <p class="sec-sub">Six clear steps from first idea to a belt in your hands. Click a step to see what happens.</p>
+    </header>
+
+    <div class="steps rv" id="steps" style="--p:0%">
+      <span class="steps-line"><i></i></span>
+      <button class="st on" data-i="0"><span class="st-n">1</span><b>Consult</b></button>
+      <button class="st" data-i="1"><span class="st-n">2</span><b>Design</b></button>
+      <button class="st" data-i="2"><span class="st-n">3</span><b>Materials</b></button>
+      <button class="st" data-i="3"><span class="st-n">4</span><b>Handcraft</b></button>
+      <button class="st" data-i="4"><span class="st-n">5</span><b>Inspect</b></button>
+      <button class="st" data-i="5"><span class="st-n">6</span><b>Deliver</b></button>
+    </div>
+
+    <div class="step-card rv" aria-live="polite">
+      <div class="step-num" id="stN">01</div>
+      <div class="step-main"><h3 id="stT">Consult &amp; quote</h3><p id="stP"></p></div>
+      <div class="step-side"><span class="eta"><svg class="ic"><use href="#i-clock"/></svg> <b id="stE">Day 0</b></span><ul id="stC"></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 CHAMPIONS (TESTIMONIALS) ============ -->
+<section class="sec sec-tint" id="champions">
+  <div class="container champs">
+    <div class="champ-media rv">
+      <img src="assets/images/ring-presenters.webp" alt="Ring presenters holding a professional champion belt in a cage" loading="lazy">
+      <div class="champ-card"><div class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div><b>4.9 / 5</b><span>Average from 2,400+ reviews</span></div>
+    </div>
+
+    <div class="champ-copy">
+      <span class="eyebrow rv"><svg class="ic"><use href="#i-quote"/></svg> Real champions</span>
+      <h2 class="sec-title rv" style="--d:.06s">Real belts. <span class="hl">Real reactions.</span></h2>
+
+      <div class="quotes rv" id="quotes" style="--d:.1s">
+        <figure class="q on"><blockquote>The belt arrived in a display box and looked even better than the proof. Our champion cried when he saw it. Worth every penny.</blockquote><figcaption><span class="av">MH</span><div><b>Marcus Hale</b><small>Head coach, Ironhouse Gym</small></div></figcaption></figure>
+        <figure class="q"><blockquote>Four seasons in and the league belt is the most talked-about thing every year. The winner's photo with it is now a tradition.</blockquote><figcaption><span class="av">PN</span><div><b>Priya Nair</b><small>Fantasy league commissioner</small></div></figcaption></figure>
+        <figure class="q"><blockquote>We use these as quarterly sales awards. Reps compete for the belt harder than for the bonus. The team at Crownworks was fast and patient.</blockquote><figcaption><span class="av">DO</span><div><b>Daniel Ortiz</b><small>Sales director, Summit &amp; Co.</small></div></figcaption></figure>
+        <figure class="q"><blockquote>Ordered 12 belts for our fight night. Every plate was perfect and they landed two days before the event.</blockquote><figcaption><span class="av">SM</span><div><b>Sofia Marin</b><small>Event promoter</small></div></figcaption></figure>
+      </div>
+      <div class="q-ctrl"><button class="arrow" id="qPrev" aria-label="Previous"><svg class="ic"><use href="#i-left"/></svg></button><div class="q-dots" id="qDots"></div><button class="arrow" id="qNext" aria-label="Next"><svg class="ic"><use href="#i-right"/></svg></button></div>
+      <p class="sample-note">Sample testimonials. Replace with your real customer reviews.</p>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <p class="logos-label rv">Trusted by gyms, leagues and companies</p>
+    <div class="logos rv"><span class="l1">IRONHOUSE</span><span class="l2">Northside BJJ</span><span class="l3">Metro Fantasy League</span><span class="l4">Harbor &amp; Co.</span><span class="l5">APEX Athletics</span><span class="l6">Summit Sales</span></div>
+  </div> -->
+</section>
+
+
+
+<!-- PREMIUM TRUSTED PARTNERS SECTION -->
+<section class="trust-section">
+  <div class="container">
+
+    <div class="trust-inner rv">
+
+      <!-- LEFT CONTENT -->
+      <div class="trust-heading">
+        <span class="trust-kicker">
+          <span class="trust-line"></span>
+          OUR TRUSTED NETWORK
+        </span>
+
+        <h3>
+          Built for the names
+          <span>that lead.</span>
+        </h3>
+
+        <p>
+          Proud to create championship experiences for
+          gyms, leagues and ambitious organizations.
+        </p>
+      </div>
+
+      <!-- RIGHT PARTNER LOGOS -->
+      <div class="trust-partners">
+
+        <div class="trust-logo">
+          <span class="trust-symbol">IH</span>
+          <span class="trust-name l1">IRONHOUSE</span>
+        </div>
+
+        <div class="trust-logo">
+          <span class="trust-symbol">NB</span>
+          <span class="trust-name l2">Northside BJJ</span>
+        </div>
+
+        <div class="trust-logo">
+          <span class="trust-symbol">MF</span>
+          <span class="trust-name l3">Metro Fantasy League</span>
+        </div>
+
+        <div class="trust-logo">
+          <span class="trust-symbol">H</span>
+          <span class="trust-name l4">Harbor &amp; Co.</span>
+        </div>
+
+        <div class="trust-logo">
+          <span class="trust-symbol">AP</span>
+          <span class="trust-name l5">APEX Athletics</span>
+        </div>
+
+        <div class="trust-logo">
+          <span class="trust-symbol">SS</span>
+          <span class="trust-name l6">Summit Sales</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ============ 08 STORIES (EDITORIAL) ============ -->
+<section class="sec" id="stories">
+  <div class="container">
+
+<!-- STORIES SECTION HEADING -->
+<header class="story-heading rv">
+
+  <div class="story-heading-content">
+    <span class="eyebrow">
+      <svg class="ic">
+        <use href="#i-mail"/>
+      </svg>
+      THE JOURNAL
+    </span>
+
+    <h2 class="sec-title">
+      Stories. Insights.
+      <span class="hl">Championship mindset.</span>
+    </h2>
+  </div>
+
+  <a href="#stories" class="story-view-btn">
+    <span>View all articles</span>
+    <span class="story-btn-icon">
+      <svg class="ic">
+        <use href="#i-arrow"/>
+      </svg>
+    </span>
+  </a>
+
+</header>
+
+    <!-- <header class="sec-head split rv">
+      <div>
+        <span class="eyebrow"><svg class="ic"><use href="#i-mail"/></svg> The journal</span>
+        <h2 class="sec-title">Stories. Insights. <span class="hl">Championship mindset.</span></h2>
+      </div>
+      <a href="#stories" class="btn btn-sm btn-ghost">View all articles <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+    </header> -->
+
+    <div class="story-grid">
+      <article class="story-lead rv">
+        <a href="#stories" class="story-img"><img src="assets/images/story-fantasy-playoff.webp" alt="Fantasy football playoff prize ideas for 2026" loading="lazy"></a>
+        <div class="story-meta"><span class="tag">Fantasy League</span><time datetime="2026-11-10">Nov 10, 2026</time><span>6 min read</span></div>
+        <h3><a href="#stories">Fantasy playoff prize ideas for 2026: belts, trophies and more</a></h3>
+        <p>The best prizes are the ones people want to win again. Here are the ideas commissioners are using this season.</p>
+        <a href="#stories" class="read">Read article <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <div class="story-list">
+        <article class="story-sm rv" style="--d:.08s">
+          <a href="#stories" class="story-thumb"><img src="assets/images/de74d436-64d4-4938-9c51-59b6079dfcf5.webp" alt="Service retirement belt" loading="lazy"></a>
+          <div><div class="story-meta"><span class="tag tag-b">Gift guide</span><time datetime="2026-11-11">Nov 11</time></div><h3><a href="#stories">2026 World Long Drive Championship: Meet the Champions and the Belts Behind Golf's Biggest Drives</a></h3></div>
+        </article>
+        <article class="story-sm rv" style="--d:.16s">
+          <a href="#stories" class="story-thumb"><img src="assets/images/image-Picsart-AiImageEnhancer_2_21.webp" alt="Corporate sales belt" loading="lazy"></a>
+          <div><div class="story-meta"><span class="tag tag-c">Corporate</span><time datetime="2026-11-04">Nov 4</time></div><h3><a href="#stories">Custom Championship Belts for the World Long Drive Golf Championship</a></h3></div>
+        </article>
+        <article class="story-sm rv" style="--d:.24s">
+          <a href="#stories" class="story-thumb"><img src="assets/images/dc1891d7-2f09-4c09-b78b-84784d190b9f.webp" alt="League award set" loading="lazy"></a>
+          <div><div class="story-meta"><span class="tag">Awards</span><time datetime="2026-10-28">Oct 28</time></div><h3><a href="#stories">WWE Raw Is Coming to Toledo: Get Your Custom Wrestling Belt</a></h3></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 FAQ ============ -->
+<section class="sec sec-tint" id="faq">
+  <div class="container faq-grid">
+    <div class="faq-intro rv">
+      <span class="eyebrow"><svg class="ic"><use href="#i-headset"/></svg> Support</span>
+      <h2 class="sec-title">Questions? <span class="hl">Answered.</span></h2>
+      <p class="sec-sub">Can't find what you need? Our team replies within a few hours, every day of the week.</p>
+      <div class="help-card"><span class="help-ic"><svg class="ic"><use href="#i-headset"/></svg></span><div><b>24/7 support</b><span>hello@crownworks.example</span></div></div>
+    </div>
+    <div class="faq-list rv" style="--d:.1s">
+      <details open><summary>How long does a custom belt take?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Most belts ship about 7 days after you approve the design proof. Rush options are available if you have a deadline.</p></details>
+      <details><summary>Can I add my own logo and text?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Yes. Upload a logo or describe your idea and our designers will lay it out on the plates. You see a free proof before we make anything.</p></details>
+      <details><summary>Do you ship internationally?<svg class="ic"><use href="#i-plus"/></svg></summary><p>We ship tracked and insured to 48 countries. Delivery usually takes 3 to 7 business days after dispatch.</p></details>
+      <details><summary>What if I am not happy with my belt?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Every belt is covered by our 30-day guarantee. We will remake it or refund you.</p></details>
+      <details><summary>Can I order in bulk for a team or league?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Absolutely. Orders of 10 or more get volume pricing and a dedicated designer. Contact us for a quote.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 CTA ============ -->
+<section class="sec" id="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-copy">
+        <span class="eyebrow eyebrow-coral rv"><svg class="ic"><use href="#i-sparkle"/></svg> Your dream belt</span>
+        <h2 class="sec-title rv" style="--d:.06s">Ready to design a belt <span class="hl">they'll never forget?</span></h2>
+        <p class="sec-sub rv" style="--d:.1s">Tell us who it's for and we'll send a free design proof within 24 hours.</p>
+        <form class="news-form rv" data-form style="--d:.14s" novalidate>
+          <label class="sr" for="ctaEmail">Email address</label>
+          <input id="ctaEmail" type="email" placeholder="Your email address" required>
+          <button class="btn" type="submit">Get my free proof <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></button>
+        </form>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <ul class="cta-points rv" style="--d:.18s"><li><svg class="ic"><use href="#i-check"/></svg> No credit card</li><li><svg class="ic"><use href="#i-check"/></svg> No obligation</li><li><svg class="ic"><use href="#i-check"/></svg> Reply in 24h</li></ul>
+      </div>
+      <div class="cta-art rv" aria-hidden="true">
+        <img class="a1" src="assets/images/belt-crimson-ring.webp" alt="" loading="lazy">
+        <img class="a2" src="assets/images/belt-arctic-ring.webp" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="foot-news">
+      <div><h3>Get belt design ideas &amp; new releases</h3><p>One email a month. No spam, ever.</p></div>
+      <form class="news-form" data-form novalidate>
+        <label class="sr" for="footEmail">Email address</label>
+        <input id="footEmail" type="email" placeholder="Enter your email" required>
+        <button class="btn" type="submit">Subscribe <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></button>
+      </form>
+    </div>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="brand"><!--<span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M5 24l-1.500-13 6.500 5 6-9 6 9 6.500-5L27 24z" fill="currentColor"/><rect x="5" y="25.500" width="22" height="3" rx="1.500" fill="currentColor"/></svg></span><span class="brand-name">Crownworks</span>--><img src="../crownworks/assets/images/Mask_group_7_333067f5-b985-4275-808a-b04df8acffa7.webp"/></a>
+        <p>Custom championship belts for boxing, MMA, fantasy leagues and companies. Built to be held high.</p>
+        <div class="social"><a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-insta"/></svg></a><a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a><a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a><a href="#" aria-label="X"><svg class="ic"><use href="#i-x"/></svg></a><a href="#" aria-label="LinkedIn"><svg class="ic"><use href="#i-in"/></svg></a></div>
+      </div>
+      <nav class="foot-col" aria-label="Shop"><h4>Shop</h4><a href="#categories">Collections</a><a href="#shop">Best sellers</a><a href="#spotlight">Spotlight</a><a href="#cta">Custom belts</a></nav>
+      <nav class="foot-col" aria-label="Company"><h4>Company</h4><a href="#craft">Our craft</a><a href="#process">Process</a><a href="#stories">Journal</a><a href="#champions">Reviews</a></nav>
+      <nav class="foot-col" aria-label="Support"><h4>Support</h4><a href="#faq">FAQ</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact us</a></nav>
+    </div>
+
+    <div class="mega" aria-hidden="true">PROAM BELTS</div>
+
+    <div class="foot-bar"><span>© 2026 ProAmBelts. All rights reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span></div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+  <header class="drawer-head"><h3>Your cart <span class="cart-count" data-count-badge>0</span></h3><button class="icon-btn" id="cartClose" aria-label="Close cart"><svg class="ic"><use href="#i-close"/></svg></button></header>
+  <div class="ship"><p id="shipMsg">You're $300 away from free shipping</p><div class="ship-bar"><i id="shipFill"></i></div></div>
+  <ul class="drawer-items" id="drawerItems"></ul>
+  <div class="drawer-empty" id="drawerEmpty"><svg class="ic"><use href="#i-cart"/></svg><b>Your cart is empty</b><p>Add a belt to see it here.</p><a href="#shop" class="btn btn-sm" id="emptyShop">Browse belts <span class="bi"><svg class="ic"><use href="#i-arrow"/></svg></span></a></div>
+  <footer class="drawer-foot" id="drawerFoot"><div class="sub"><span>Subtotal</span><b id="cartSub">$0</b></div><p>Taxes calculated at checkout.</p><button class="btn" id="checkout">Checkout <span class="bi"><svg class="ic"><use href="#i-lock"/></svg></span></button></footer>
+</aside>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><svg class="ic"><use href="#i-arrow"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
