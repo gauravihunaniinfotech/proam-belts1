@@ -216,35 +216,203 @@
   }
 
   /* ---------- Process stepper ---------- */
-  const STEPS = [
-    { t: 'Consult & quote', p: 'Tell us about your team, league or event. We reply within 4 business hours with a quote and a few style directions to react to.', e: 'Day 0', c: ['Free consultation', 'Instant price range', 'Bulk pricing for 10+'] },
-    { t: 'Design & proof', p: 'Our designers lay out your text, logos and colors, then send a free proof. Revise as many times as you like before anything is made.', e: 'Day 1 to 2', c: ['Free design proof', 'Unlimited revisions', 'Logo cleanup included'] },
-    { t: 'Choose materials', p: 'Pick your strap leather and plate finish (24K gold, silver or black chrome) and decide how many side plates you want.', e: 'Day 2', c: ['4 strap colors', '3 plating finishes', 'Up to 6 side plates'] },
-    { t: 'Handcrafted', p: 'Plates are cast, polished and plated, then mounted on a hand-stitched strap by our artisans at the bench.', e: 'Day 3 to 6', c: ['Hand-polished plates', 'Hand-stitched leather', 'Colorfast plating'] },
-    { t: 'Quality inspection', p: 'Every belt is checked for finish, stitching and text accuracy. If something is off, we remake it before it ships.', e: 'Day 6', c: ['Spelling checked twice', 'Finish inspection', 'Photo before shipping'] },
-    { t: 'Delivered', p: 'Your belt travels tracked and insured in a padded display box, ready to be presented at the podium.', e: 'Day 7+', c: ['Tracked & insured', 'Padded display box', '30-day guarantee'] }
-  ];
-  const stepsEl = $('#steps');
-  if (stepsEl) {
-    const btns = $$('.st', stepsEl), card = $('.step-card');
-    const n = $('#stN'), t = $('#stT'), p = $('#stP'), e = $('#stE'), c = $('#stC');
-    let cur = 0, auto, userTouched = false;
-    const go = (i, animate = true) => {
-      cur = i;
-      btns.forEach((b, k) => { b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
-      stepsEl.style.setProperty('--p', (i / (btns.length - 1)) * 100 + '%');
-      const s = STEPS[i];
-      n.textContent = String(i + 1).padStart(2, '0'); t.textContent = s.t; p.textContent = s.p; e.textContent = s.e;
-      c.innerHTML = s.c.map((x) => '<li>' + x + '</li>').join('');
-      if (animate && !reduce) { card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap'); }
-    };
-    btns.forEach((b, i) => b.addEventListener('click', () => { userTouched = true; clearInterval(auto); go(i); }));
-    go(0, false);
-    new IntersectionObserver((es) => es.forEach((en) => {
-      clearInterval(auto);
-      if (en.isIntersecting && !userTouched && !reduce) auto = setInterval(() => go((cur + 1) % btns.length), 4200);
-    }), { threshold: 0.5 }).observe(stepsEl);
+  // const STEPS = [
+  //   { t: 'Consult & quote', p: 'Tell us about your team, league or event. We reply within 4 business hours with a quote and a few style directions to react to.', e: 'Day 0', c: ['Free consultation', 'Instant price range', 'Bulk pricing for 10+'] },
+  //   { t: 'Design & proof', p: 'Our designers lay out your text, logos and colors, then send a free proof. Revise as many times as you like before anything is made.', e: 'Day 1 to 2', c: ['Free design proof', 'Unlimited revisions', 'Logo cleanup included'] },
+  //   { t: 'Choose materials', p: 'Pick your strap leather and plate finish (24K gold, silver or black chrome) and decide how many side plates you want.', e: 'Day 2', c: ['4 strap colors', '3 plating finishes', 'Up to 6 side plates'] },
+  //   { t: 'Handcrafted', p: 'Plates are cast, polished and plated, then mounted on a hand-stitched strap by our artisans at the bench.', e: 'Day 3 to 6', c: ['Hand-polished plates', 'Hand-stitched leather', 'Colorfast plating'] },
+  //   { t: 'Quality inspection', p: 'Every belt is checked for finish, stitching and text accuracy. If something is off, we remake it before it ships.', e: 'Day 6', c: ['Spelling checked twice', 'Finish inspection', 'Photo before shipping'] },
+  //   { t: 'Delivered', p: 'Your belt travels tracked and insured in a padded display box, ready to be presented at the podium.', e: 'Day 7+', c: ['Tracked & insured', 'Padded display box', '30-day guarantee'] }
+  // ];
+  // const stepsEl = $('#steps');
+  // if (stepsEl) {
+  //   const btns = $$('.st', stepsEl), card = $('.step-card');
+  //   const n = $('#stN'), t = $('#stT'), p = $('#stP'), e = $('#stE'), c = $('#stC');
+  //   let cur = 0, auto, userTouched = false;
+  //   const go = (i, animate = true) => {
+  //     cur = i;
+  //     btns.forEach((b, k) => { b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
+  //     stepsEl.style.setProperty('--p', (i / (btns.length - 1)) * 100 + '%');
+  //     const s = STEPS[i];
+  //     n.textContent = String(i + 1).padStart(2, '0'); t.textContent = s.t; p.textContent = s.p; e.textContent = s.e;
+  //     c.innerHTML = s.c.map((x) => '<li>' + x + '</li>').join('');
+  //     if (animate && !reduce) { card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap'); }
+  //   };
+  //   btns.forEach((b, i) => b.addEventListener('click', () => { userTouched = true; clearInterval(auto); go(i); }));
+  //   go(0, false);
+  //   new IntersectionObserver((es) => es.forEach((en) => {
+  //     clearInterval(auto);
+  //     if (en.isIntersecting && !userTouched && !reduce) auto = setInterval(() => go((cur + 1) % btns.length), 4200);
+  //   }), { threshold: 0.5 }).observe(stepsEl);
+  // }
+
+
+const STEPS = [
+  {
+    t: 'Consult & quote',
+    p: 'Tell us about your team, league or event. We reply within 4 business hours with a quote and a few style directions to react to.',
+    e: 'Day 0',
+    c: ['Free consultation', 'Instant price range', 'Bulk pricing for 10+']
+  },
+  {
+    t: 'Design & proof',
+    p: 'Our designers lay out your text, logos and colors, then send a free proof. Revise as many times as you like before anything is made.',
+    e: 'Day 1 to 2',
+    c: ['Free design proof', 'Unlimited revisions', 'Logo cleanup included']
+  },
+  {
+    t: 'Choose materials',
+    p: 'Pick your strap leather and plate finish (24K gold, silver or black chrome) and decide how many side plates you want.',
+    e: 'Day 2',
+    c: ['4 strap colors', '3 plating finishes', 'Up to 6 side plates']
+  },
+  {
+    t: 'Handcrafted',
+    p: 'Plates are cast, polished and plated, then mounted on a hand-stitched strap by our artisans at the bench.',
+    e: 'Day 3 to 6',
+    c: ['Hand-polished plates', 'Hand-stitched leather', 'Colorfast plating']
+  },
+  {
+    t: 'Quality inspection',
+    p: 'Every belt is checked for finish, stitching and text accuracy. If something is off, we remake it before it ships.',
+    e: 'Day 6',
+    c: ['Spelling checked twice', 'Finish inspection', 'Photo before shipping']
+  },
+  {
+    t: 'Delivered',
+    p: 'Your belt travels tracked and insured in a padded display box, ready to be presented at the podium.',
+    e: 'Day 7+',
+    c: ['Tracked & insured', 'Padded display box', '30-day guarantee']
   }
+];
+
+
+const stepsEl = $('#steps');
+
+if (stepsEl) {
+  const btns = $$('.st', stepsEl);
+  const card = $('.step-card');
+
+  const n = $('#stN');
+  const t = $('#stT');
+  const p = $('#stP');
+  const e = $('#stE');
+  const c = $('#stC');
+
+  const DURATION = 4200;
+  const total = btns.length - 1;
+
+  let cur = 0;
+  let auto = null;
+  let userTouched = false;
+  let isVisible = false;
+
+  const setProgress = (value, duration = DURATION) => {
+    stepsEl.style.setProperty('--progress-duration', duration + 'ms');
+    stepsEl.style.setProperty('--p', value + '%');
+  };
+
+  const go = (i, animate = true) => {
+    cur = (i + btns.length) % btns.length;
+
+    // btns.forEach((b, k) => {
+    //   b.classList.toggle('on', k === cur);
+    //   b.classList.toggle('done', k < cur);
+    // });
+
+    btns.forEach((b, k) => {
+      b.classList.toggle('on', k === cur);
+      b.classList.toggle('done', k < cur);
+    });
+
+      const s = STEPS[cur];
+
+      n.textContent = String(cur + 1).padStart(2, '0');
+      t.textContent = s.t;
+      p.textContent = s.p;
+      e.textContent = s.e;
+
+      c.innerHTML = s.c.map(x => `<li>${x}</li>`).join('');
+
+      if (animate && !reduce && card) {
+        card.classList.remove('swap');
+        void card.offsetWidth;
+        card.classList.add('swap');
+      }
+    };
+
+    const stopAuto = () => {
+      clearTimeout(auto);
+      auto = null;
+    };
+
+    // Continuous looping from Step 1 to Step 6
+    const animateNext = () => {
+    stopAuto();
+
+    if (!isVisible || userTouched || reduce) return;
+
+    // If Step 6 is active, wait before restarting at Step 1
+    if (cur === btns.length - 1) {
+      auto = setTimeout(() => {
+        setProgress(0, 0);
+        go(0);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setProgress((1 / total) * 100, DURATION);
+          });
+        });
+        auto = setTimeout(() => {
+          animateNext();
+        }, DURATION);
+      }, DURATION);
+      return;
+    }
+
+    // Move to the next step
+    const next = cur + 1;
+    setProgress((next / total) * 100, DURATION);
+    auto = setTimeout(() => {
+      go(next);
+      animateNext();
+    }, DURATION);
+  };
+
+  // Manual selection
+  btns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      userTouched = true;
+      stopAuto();
+
+      go(i);
+      setProgress((i / total) * 100, 600);
+    });
+  });
+
+  // Initial state
+  go(0, false);
+  setProgress(0, 0);
+
+  // Viewport observer
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      isVisible = entry.isIntersecting;
+
+      if (isVisible && !userTouched && !reduce) {
+        if (!auto) {
+          animateNext();
+        }
+      } else {
+        stopAuto();
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(stepsEl);
+}
+
 
   /* ---------- Testimonials ---------- */
   const qs = $$('#quotes .q'), dotsEl = $('#qDots');

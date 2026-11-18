@@ -677,9 +677,58 @@ h1,h2,h3,h4{font-family:var(--head);letter-spacing:-.02em;line-height:1.08}
 .perks b{display:block;color:#fff;font-size:.88rem}
 
 /* ---------- Process ---------- */
-.steps{position:relative;display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:34px}
-.steps-line{position:absolute;left:calc(100%/12);right:calc(100%/12);top:28px;height:4px;border-radius:4px;background:var(--line)}
-.steps-line i{display:block;height:100%;width:var(--p);background:linear-gradient(90deg,var(--coral),var(--sun));border-radius:4px;transition:width .7s var(--ease)}
+/* .steps{position:relative;display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:34px} */
+/* .steps-line{position:absolute;left:calc(100%/12);right:calc(100%/12);top:28px;height:4px;border-radius:4px;background:var(--line)} */
+/* .steps-line i{display:block;height:100%;width:var(--p);background:linear-gradient(90deg,var(--coral),var(--sun));border-radius:4px;transition:width .7s var(--ease)} */
+
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 34px;
+}
+
+.steps-line {
+  position: absolute;
+  left: calc(100% / 12);
+  right: calc(100% / 12);
+  top: 28px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.steps-line i {
+  display: block;
+  height: 100%;
+  width: var(--p, 0%);
+  background: linear-gradient(90deg, var(--coral), var(--sun));
+  border-radius: 4px;
+  transition: width var(--progress-duration, 4.2s) linear;
+  will-change: width;
+}
+
+.st.on .st-n {
+  background: var(--coral);
+  color: #fff;
+  box-shadow: 0 0 0 8px var(--coral-tint);
+  transform: scale(1.1);
+}
+
+.st.done .st-n {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* Upcoming steps remain white */
+.st:not(.on):not(.done) .st-n {
+  background: #fff;
+  color: var(--ink-3);
+  box-shadow: inset 0 0 0 3px var(--line);
+}
+
 .st{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:.92rem;color:var(--ink-3);transition:color .3s}
 .st-n{width:60px;height:60px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:1.25rem;box-shadow:inset 0 0 0 3px var(--line);transition:all .5s var(--ease)}
 .st:hover .st-n{box-shadow:inset 0 0 0 3px var(--coral)}
@@ -848,8 +897,8 @@ h1,h2,h3,h4{font-family:var(--head);letter-spacing:-.02em;line-height:1.08}
 /* LOGO SYMBOL */
 
 .trust-symbol {
-  width: 28px;
-  height: 28px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   border-radius: 8px;
